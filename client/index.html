@@ -8,11 +8,31 @@
 
     <section id="button-container">
       <button id="complimentButton">Get a compliment</button>
-      <button id="fortuneButton">Tell me todays fortune</button>
-      <button id="inspireButton">Inspire Me</button>
-      <!-- <button id="complimentButton">Get a compliment</button> -->
+      <button id="fortuneButton">Tell me my fortune</button>
+      <form>
+        <label for="options">Help Me:</label>
+        <select name="options" id="options">
+          <option value="">Select</option>
+          <option value="inspire">Inspire</option>
+          <option value="encourage">Encourage</option>
+          <option value="goals">Reach my goals</option>
+        </select>
+      </form>
+
+      <button id="write-button">Write my own Quotes!</button>
     </section>
-    <section id="messages"></section>
+
+        <div class="form-popup" id="myForm">
+          <form class="form-container">
+            <h1>Write your Quote!</h1>
+            <input type="text" id="my-message" placeholder="Whats on you mind" name="quote" required>
+            <button type="submit" class="submit"  >Done</button>
+            <button type="button" class="close" >Close</button>
+          </form>
+        </div>
+
+    <section id="displayMessages"></section>
+    
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
   </body>
